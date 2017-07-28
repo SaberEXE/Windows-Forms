@@ -25,7 +25,7 @@ namespace TrainerGenerator
                 string internalName = textBox1.Text;
                 internalName = internalName.Replace(" ", String.Empty);
                 string externalName = textBox1.Text;
-                string desc = textBox2.Text;
+                string desc = "\"" + textBox2.Text + "\"";
 
                 string path = @"c:\temp\exported.txt";
                 using (StreamWriter sw = File.CreateText(path))
@@ -43,9 +43,9 @@ namespace TrainerGenerator
         private void saveAstxtToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string id = idInput.Text;
-            string internalName = textBox1.Text;
+            string internalName = textBox2.Text;
             internalName = internalName.Replace(" ", String.Empty);
-            string externalName = textBox1.Text;
+            string externalName = textBox2.Text;
             string desc = textBox2.Text;
             string path = @"\";
             using (StreamWriter sw = File.CreateText(path))
